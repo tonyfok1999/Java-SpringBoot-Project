@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Form</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="/home">Tellmachine.com</a>
+		<div>
+			<li class="nav-link" sec:authorize="isAuthenticated()"><a
+				style="color: white;" th:href="@{/logout}">Logout</a></li>
+
+		</div>
+	</nav>
+
+	<br></br>
+
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Create New Account</h1>
+				<div class="card-body">
+					<form th:action="@{/account/new}" th:object="${account}"
+						method="POST">
+						<div class="form-group">
+							<label> Name of Account </label> <input type="text"
+								name="accountName" th:field="*{accountName}" class="form-control"
+								placeholder="Enter Name of Account" />
+						</div>
+
+						<div class="form-group">
+							<label> Deposit Amount </label> <input type="text"
+								name="balance" th:field="*{balance}" class="form-control"
+								placeholder="Enter Initial Deposit Amount" />
+						</div>
+
+
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<!-- <body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" th:href="@{/}">tellmachine.com</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<br></br>
+
+	<h1>Welcome Home!</h1>
+
+	<div th:object="${user}">
+
+		<span th:text="*{username}"></span> <span th:text="*{password}"></span>
+
+
+	</div>
+
+
+</body> -->
+</html>
