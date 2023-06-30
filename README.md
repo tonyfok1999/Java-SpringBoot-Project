@@ -1,6 +1,12 @@
 # Simulated Bank Account Management Platform
 This is my individual coding project to simulate a bank account management platform, where users can log in to their accounts to create, delete, and top up their wallets.
 
+## To Run this Project
+```
+1. Download MySQL at https://www.mysql.com/products/workbench/
+2. At "/tellermachine/src/main/resources/application2.properties", add your MySQL pw after "spring.datasource.password=" on line 7
+3. Change the filename from "application2.properties" to "application.properties"
+```
 ## Tech Stack
 Frontend: JSP / Thymleaf / HTML</br>
 Backend: SpringBoot (Security, Data) / Hibernate</br>
