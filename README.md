@@ -4,7 +4,7 @@ This is my individual coding project to simulate a bank account management platf
 ## To Run this Project
 ```
 1. Download MySQL at https://www.mysql.com/products/workbench/
-2. At "/tellermachine/src/main/resources/application2.properties", add your MySQL pw after "spring.datasource.password=" on line 7
+2. At "/src/main/resources/application2.properties", add your MySQL password after "spring.datasource.password=" on line 7
 3. Change the filename from "application2.properties" to "application.properties"
 ```
 ## Tech Stack
